@@ -18,10 +18,8 @@ pipeline {
 
         stage('Test2') {
           steps {
-            waitUntil() {
-              sleep 3
-            }
-
+            waitUntil()
+            echo 'hi again'
           }
         }
 
