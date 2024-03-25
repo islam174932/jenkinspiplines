@@ -9,7 +9,7 @@ pipeline {
           }
         }
 
-        stage('test') {
+        stage('Test') {
           steps {
             echo 'test the application '
             echo "get the driver path ${androiddriver}"
@@ -19,9 +19,9 @@ pipeline {
       }
     }
 
-    stage('depoly') {
+    stage('DeplOy') {
       steps {
-        echo 'we depoly '
+        echo 'we deploy '
       }
     }
 
