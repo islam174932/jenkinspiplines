@@ -12,6 +12,7 @@ pipeline {
         stage('test') {
           steps {
             echo 'test the application '
+            echo '"get the driver path$${androiddriver}"'
           }
         }
 
@@ -24,5 +25,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    androiddriver = 'D:\\Demo\\Android.SauceLabs.Mobile.Sample.app.2.7.1'
   }
 }
