@@ -12,7 +12,7 @@ pipeline {
         stage('test') {
           steps {
             echo 'test the application '
-            echo "get the driver path$${androiddriver}"
+            echo "get the driver path${androiddriver}"
           }
         }
 
