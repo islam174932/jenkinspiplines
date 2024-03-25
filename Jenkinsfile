@@ -16,6 +16,15 @@ pipeline {
           }
         }
 
+        stage('Test2') {
+          steps {
+            waitUntil() {
+              sleep 3
+            }
+
+          }
+        }
+
       }
     }
 
