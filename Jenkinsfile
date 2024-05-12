@@ -5,32 +5,16 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            echo 'here we start the pipeline'
-          }
-        }
-
-        stage('Test') {
-          steps {
-            echo 'test the application '
-            echo "get the driver path ${androiddriver}"
+            echo 'test message'
           }
         }
 
         stage('Test2') {
           steps {
-            waitUntil() {
-              sleep 3
-            }
-
+            echo 'we test'
           }
         }
 
-      }
-    }
-
-    stage('file') {
-      steps {
-        archiveArtifacts 'Logfile.txt'
       }
     }
 
