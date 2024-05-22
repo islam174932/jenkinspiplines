@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'jenkins/slave'
+            args '-w ${pwd()}'
         }
     }
     stages {
