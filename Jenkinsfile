@@ -1,25 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            echo 'test message'
-          }
-        }
-
-        stage('Test2') {
-          steps {
-            echo 'we test'
-          }
-        }
-
-      }
+    agent {
+        label 'slave'
     }
-
-  }
-  environment {
-    androiddriver = 'D:\\Demo\\Android.SauceLabs.Mobile.Sample.app.2.7.1'
-  }
+    stages {
+        stage('Hello') {
+            steps {
+                sh 'java -version'
+                echo "Get working directory"
+                sh 'pwd'
+            }
+        }
+    }
 }
