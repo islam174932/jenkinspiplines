@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'jenkins/slave'
-            args '-w ${pwd()}'
+            image 'slave'
+            
         }
     }
     stages {
