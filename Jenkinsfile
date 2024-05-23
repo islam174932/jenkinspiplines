@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'jenkins/slave:latest'
+            image 'jenkins/slave'
             label 'slave'
         }
     }
