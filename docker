@@ -1,15 +1,6 @@
-pipeline {
-    agent {
-        label 'slaveing'
-    }
-    stages {
-        stage('Hello') {
-            steps {
-                sh 'java -version'
-                echo "Get working directory"
-                sh 'pwd'
-            }
-        }
-    }
-}
+FROM jenkins/inbound-agent:latest
+
+USER root
+RUN apt-get update && apt-get install -y git
+USER jenkins
 
